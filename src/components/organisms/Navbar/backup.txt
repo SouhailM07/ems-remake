@@ -1,0 +1,95 @@
+
+"use client";
+import MyDialog from "@/components/atoms/MyDialog/MyDialog";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { IoLanguageOutline } from "react-icons/io5";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Navbar() {
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "News", href: "/news" },
+    { name: "OFFER", href: "/offer" },
+    { name: "F&Q", href: "/faq" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  const { scrollY } = useScroll();
+  const threshold = 50; // how much scroll before bg changes
+
+  // Change background color with scroll
+  const textColor = useTransform(
+    scrollY,
+    [0, threshold, threshold + 1],
+    ["#000000", "#000000", "#FFFFFF"]
+  );
+
+  const bgColor = useTransform(
+    scrollY,
+    [0, threshold, threshold + 1],
+    ["#FFFFFFE6", "#FFFFFFE6", "rgba(59,130,246,0.9)"] // blue-500 with transparency
+  );
+
+  const width = useTransform(
+    scrollY,
+    [0, threshold, threshold + 1],
+    ["80rem", "80rem", "62rem"]
+  );
+
+  return (
+    <header className="fixed top-0 w-full z-10">
+      <motion.nav
+        style={{ backgroundColor: bgColor, maxWidth: width }}
+        className="duration-200 rounded-md shadow-md mx-auto flex items-center justify-between px-6 py-4"
+      >
+        {/* Logo */}
+        <div className="flex items-center w-[10rem]">
+          <Image src="/logo.png" alt="logo" height={80} width={80} />
+        </div>
+
+        {/* Nav Links */}
+        <motion.ul
+          style={{ color: textColor }}
+          className="hidden md:flex space-x-8"
+        >
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.href}
+                className="hover:text-orange-500 font-medium transition-colors duration-200"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </motion.ul>
+
+        {/* Action Buttons */}
+        <div className="flex space-x-3">
+          <MyDialog
+            title="Track Your order"
+            trigger={
+              <button className="bg-orange-500 text-white px-6 py-3 rounded hover:bg-orange-600 transition text-lg">
+                Track
+              </button>
+            }
+          >
+            sb
+          </MyDialog>
+          <button className="flex gap-2 items-center bg-orange-500 text-white px-2 py-2 rounded hover:bg-orange-600 transition ">
+            {/* <span>EN</span> */}
+            <IoLanguageOutline className="text-xl" />
+            <Image
+              src="/united-states-circle.png"
+              alt="logo"
+              height={30}
+              width={30}
+            />
+          </button>
+        </div>
+      </motion.nav>
+    </header>
+  );
+}
