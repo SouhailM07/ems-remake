@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function WhatIsEms() {
   return (
-    <section className="w-full py-24 bg-white overflow-hidden">
+    <section className="max-md:text-center w-full py-24 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
         {/* TEXT */}
         <motion.div

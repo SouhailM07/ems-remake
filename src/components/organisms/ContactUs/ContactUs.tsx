@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function ContactGrid() {
   return (
-    <section className="w-full bg-white py-16 px-6 md:px-14 lg:px-24">
-      <h1 className="text-center text-3xl font-bold text-blue-800 mb-14 tracking-wide">
+    <section className=" overflow-hidden w-full bg-white py-16 px-6 md:px-14 lg:px-24">
+      <h1 className="text-center max-md:text-center text-3xl font-bold text-blue-800 mb-14 tracking-wide">
         Contact Us
       </h1>
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
@@ -19,10 +19,10 @@ export default function ContactGrid() {
           transition={{ duration: 0.8 }}
         >
           {/* CONTACT INFORMATION */}
-          <div className="bg-white shadow-lg p-8 rounded-2xl border border-gray-100">
-            <h3 className="text-xl font-bold text-[#0B3A75] mb-6">
+          <div className=" bg-white shadow-lg p-8 rounded-2xl border border-gray-100">
+            <h2 className=" text-xl font-bold text-[#0B3A75] mb-6">
               Contact Information
-            </h3>
+            </h2>
 
             <div className="space-y-6">
               {/* PHONE */}
@@ -84,10 +84,10 @@ export default function ContactGrid() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-2xl font-bold text-[#0B3A75] mb-6">
+          <h2 className="max-md:text-center text-2xl font-bold text-[#0B3A75] mb-6">
             Get In Touch
-          </h3>
-          <form className="h-full flex flex-col justify-between">
+          </h2>
+          <form className="h-full flex  gap-2 flex-col justify-between">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 type="text"

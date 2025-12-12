@@ -15,15 +15,15 @@ export default function Hero() {
 
   // Dark Blue (EMS text): #213F98
   return (
-    <section className="flex h-screen relative items-center justify-center">
+    <section className="flex h-screen relative items-center  justify-center ">
       {/* TEXT CONTENT */}
-      <article className="absolute z-[2] text-center px-6">
+      <article className="absolute z-[2] text-center px-2 md:px-6 ">
         <TypewriterEffectDemo />
-        <div className="flex gap-4 justify-center mt-6">
+        <div className="flex gap-4 justify-center mt-6 ">
           <MyDialog
             title="Track Your order"
             trigger={
-              <button className="bg-[#213F98] hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-semibold">
+              <button className="bg-[#213F98] hover:bg-blue-800 text-white px-2 md:px-6 py-3 rounded-lg font-semibold">
                 Track Your Parcel
               </button>
             }
@@ -36,7 +36,7 @@ export default function Hero() {
               Submit
             </button>
           </MyDialog>
-          <button className="bg-[#FF8F21]  hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold">
+          <button className="bg-[#FF8F21]  hover:bg-orange-600 text-white px-2 md:px-6 py-3 rounded-lg font-semibold">
             Send a Shipment
           </button>
         </div>
@@ -71,7 +71,7 @@ const ThisCarousel = () => {
               alt="img"
               height={1800}
               width={1800}
-              className="object-cover  w-full h-screen object-bottom brightness-[0.80]"
+              className="object-cover  w-full h-screen object-bottom brightness-[0.70]"
             />
           </CarouselItem>
         ))}
@@ -90,10 +90,10 @@ function TypewriterEffectDemo() {
   return (
     <div className="flex flex-col items-center justify-center">
       {/* Typewriter Title */}
-      <TypewriterEffect className="w-[40rem] " words={words} />
+      <TypewriterEffect className="md:w-[40rem] w-full" words={words} />
 
       {/* Subtitle */}
-      <p className="text-white text-lg text-shadow-2xs md:text-xl mt-4 max-w-2xl mx-auto drop-shadow-md">
+      <p className="text-white  text-lg text-shadow-2xs md:text-xl mt-4 max-w-2xl mx-auto drop-shadow-md">
         Fast, reliable national & international shipping with EMS Champion Post
         Algeria.
       </p>

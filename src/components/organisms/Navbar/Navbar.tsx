@@ -34,18 +34,9 @@ export default function Navbar() {
           background:
             "linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(33,63,152,0.85))",
         }}
-        className="
-          max-w-[76rem]
-          mx-auto
-          px-8
-          mt-2
-          rounded-lg
-          shadow-[0_8px_30px_rgba(0,0,0,0.12)]
-          transition-all
-          duration-300
-        "
+        className=" max-w-[76rem] mx-auto px-2 md:px-8 mt-2 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 "
       >
-        <div className="flex items-center justify-between">
+        <div className=" max-sm:gap-4 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center w-[20rem]">
             <Image

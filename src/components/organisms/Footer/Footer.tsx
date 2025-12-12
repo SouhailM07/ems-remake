@@ -9,11 +9,11 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="w-full mt-20 flex justify-center">
-      <div className="w-full bg-white rounded-t-3xl shadow-xl border border-gray-200 p-10">
+      <div className="w-full bg-white rounded-t-3xl shadow-xl border border-gray-200 p-4 sm:p-10 ">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           {/* Logo + Description */}
           <div className="max-w-sm">
-            <div className="flex items-center w-[20rem]">
+            <div className="flex items-center w-full sm:w-[20rem]">
               <Image
                 src="/logo-ems-algerie-site.png"
                 alt="logo"
@@ -22,13 +22,13 @@ export default function Footer() {
                 className="select-none drop-shadow-sm"
               />
             </div>
-            <p className="text-gray-600 text-sm mt-3 leading-relaxed">
+            <p className="max-sm:text-center text-gray-600 text-sm mt-3 leading-relaxed">
               EMS Champion Post Algeria provides fast, secure and reliable
               national & international delivery — ensuring your parcels arrive
               safely and on time.
             </p>
 
-            <div className="flex items-center gap-4 mt-5 text-gray-700 text-2xl">
+            <div className="flex max-sm:justify-center items-center gap-4 mt-5 text-gray-700 text-2xl">
               <FaXTwitter className=" hover:text-blue-500 transition" />
               <FaInstagram className=" hover:text-[#FF8F21] transition" />
               <FaLinkedin className=" hover:text-blue-500 transition" />
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap gap-14">
+          <div className="flex flex-wrap gap-14 max-sm:justify-center max-sm:text-center">
             <div>
               <h3 className="font-semibold mb-3 text-[#FF8F21]">Services</h3>
               <ul className="space-y-2 text-gray-600 text-sm">
@@ -83,10 +83,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row justify-between text-sm text-gray-500">
+        <div className="max-sm:text-center  border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row justify-between text-sm text-gray-500">
           <p>© {new Date().getFullYear()} EMS Algeria. All rights reserved.</p>
 
-          <div className="flex gap-6 mt-4 md:mt-0">
+          <div className="flex gap-6 mt-4 max-sm:justify-center md:mt-0">
             <span className="hover:text-blue-500 cursor-pointer">
               Privacy Policy
             </span>

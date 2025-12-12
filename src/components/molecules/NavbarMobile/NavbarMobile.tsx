@@ -24,7 +24,7 @@ export default function NavbarMobile() {
       <SheetTrigger>
         <FaBars className="bg-[#FF8F21] md:hidden size-10 p-3 rounded" />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="w-[18rem]">
         <SheetHeader>
           <SheetTitle className="">
             <span>Menu</span>
