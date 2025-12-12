@@ -6,6 +6,7 @@
 html {
   @apply text-[18px];
 }
+
 .b {
   @apply border-2 border-emerald-400;
 }

@@ -1,4 +1,9 @@
-import { FaInstagram, FaLinkedin, FaGithub, FaXTwitter } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaFacebook,
+  FaXTwitter,
+} from "react-icons/fa6";
 import Image from "next/image";
 
 export default function Footer() {
@@ -27,7 +32,7 @@ export default function Footer() {
               <FaXTwitter className=" hover:text-blue-500 transition" />
               <FaInstagram className=" hover:text-[#FF8F21] transition" />
               <FaLinkedin className=" hover:text-blue-500 transition" />
-              <FaGithub className=" hover:text-[#FF8F21] transition" />
+              <FaFacebook className=" hover:text-[#FF8F21] transition" />
             </div>
           </div>
 

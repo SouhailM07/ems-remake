@@ -2,7 +2,8 @@ import Image from "next/image";
 
 export default function AppAds() {
   return (
-    <section className="w-full bg-gradient-to-r from-blue-50 to-blue-100">
+    <section className="w-full bg-[#e7e4f2]">
+      
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         {/* LEFT TEXT */}
         <div className="space-y-6">
@@ -39,11 +40,11 @@ export default function AppAds() {
         {/* RIGHT IMAGE */}
         <div className="relative w-full">
           <Image
-            src="/WhatsApp Image 2025-11-24 at 2.02.01 PM.jpeg"
+            src="/phones.png"
             alt="Mobile App"
             width={900}
             height={900}
-            className="w-full drop-shadow-2xl rounded-xl"
+            className="w-full h-[34rem] object-cover drop-shadow-2xl rounded-xl"
           />
         </div>
       </div>

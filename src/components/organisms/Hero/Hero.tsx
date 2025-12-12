@@ -71,7 +71,7 @@ const ThisCarousel = () => {
               alt="img"
               height={1800}
               width={1800}
-              className="object-cover  w-full h-screen object-bottom brightness-[0.60]"
+              className="object-cover  w-full h-screen object-bottom brightness-[0.80]"
             />
           </CarouselItem>
         ))}

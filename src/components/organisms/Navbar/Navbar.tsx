@@ -1,20 +1,12 @@
 "use client";
-import MyDialog from "@/components/atoms/MyDialog/MyDialog";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import { navLinks } from "@/lib";
+import NavbarMobile from "@/components/molecules/NavbarMobile/NavbarMobile";
 
 export default function Navbar() {
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "News", href: "/news" },
-    { name: "Offer", href: "/offer" },
-    { name: "F&Q", href: "/faq" },
-    { name: "Contact", href: "/contact" },
-  ];
-
   const { scrollY } = useScroll();
   const threshold = 120;
 
@@ -70,10 +62,11 @@ export default function Navbar() {
             style={{ color: textColor }}
             className="flex gap-2 items-center "
           >
-            <button className="flex gap-2 items-center bg-[#FF8F21]  text-white px-2 py-2 h-10 rounded hover:bg-orange-600 transition ">
+            <button className="md:flex hidden gap-2 items-center bg-[#FF8F21]  text-white px-2 py-2 h-10 rounded hover:bg-orange-600 transition ">
               My EMS
             </button>
             <LanguageSwitcher />
+            <NavbarMobile />
           </motion.div>
         </div>
 
