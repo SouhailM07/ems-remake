@@ -64,17 +64,19 @@ const ThisCarousel = () => {
       }}
     >
       <CarouselContent>
-        {["/IMG_6817.JPG", "/slide2.jpeg"].map((e, i) => (
-          <CarouselItem key={i}>
-            <Image
-              src={e}
-              alt="img"
-              height={1800}
-              width={1800}
-              className="object-cover  w-full h-screen object-bottom brightness-[0.70]"
-            />
-          </CarouselItem>
-        ))}
+        {["/IMG_6817.JPG", "/slide2.jpeg", "/ems-poster-web.jpg"].map(
+          (e, i) => (
+            <CarouselItem key={i}>
+              <Image
+                src={e}
+                alt="img"
+                height={1800}
+                width={1800}
+                className="object-cover  w-full h-screen object-top brightness-[0.70]"
+              />
+            </CarouselItem>
+          )
+        )}
       </CarouselContent>
     </Carousel>
   );
